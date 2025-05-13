@@ -47,7 +47,8 @@ PROJECT FLOW
       •	No face authentication required
      •	Direct gesture-based control for audio/video playback
 
-(https://github.com/user-attachments/assets/75373959-a1e6-46ca-9de9-d5ed7b7ebec0)
+     
 
+<img src="images/screenshot.png" alt="App Screenshot" width="500"/>
 
 
