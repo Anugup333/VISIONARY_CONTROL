@@ -20,8 +20,11 @@ PURPOSE :
 The purpose of this project is to develop an intelligent, gesture and vision-based interface system—Visionary Control—which enhances human-computer interaction by replacing conventional input devices with intuitive, contactless control mechanisms. The system is designed to facilitate seamless interaction with two key digital functions: Presentation control secured by face-based login and Media player Control through gesture recognition. By integrating computer vision and facial authentication, the project ensures secure access, hands-free operation, and modernized engagement, especially within academic and professional environments. The goal is to improve accessibility, reduce reliance on hardware, and promote automation in user interaction.
 
 
+ACTUAL INTERFACE:- This is User Interface of VisionaryControl
+
 
 ![image](https://github.com/user-attachments/assets/68912674-a79a-468f-a196-3c13ec21fc3d)
+
 
 
 
