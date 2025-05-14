@@ -3,13 +3,11 @@ import threading
 import time
 import cv2
 import os
-# from cvzone.HandTrackingModule import HandDetector
 import numpy as np
 import mediapipe as mp
 import pyautogui
 import pickle
 import face_recognition
-# from datetime import datetime
 import base64
 import pythoncom  # Required for COM in Flask
 import win32com.client
