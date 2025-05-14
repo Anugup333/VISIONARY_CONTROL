@@ -1,13 +1,19 @@
-Visionary Control is a smart, gesture-based control system that enables users to interact with digital media and presentation 
-tools using intuitive hand gestures. It is a unified platform that improves human-computer interaction by providing touchless 
-control through real-time gesture recognition. The system utilizes computer vision and hand tracking technologies to allow 
-seamless operation of presentations and media players without physical contact, making it especially suited for classrooms, 
-seminars, and professional environments.
+INTRODUCTION: 
+
+Visionary Control is a smart, gesture-based control system that enables users to interact with digital media and presentation tools using intuitive hand gestures. It is a unified platform that improves human-computer interaction by providing touchless control through real-time gesture recognition. The system utilizes computer vision and hand tracking technologies to allow seamless operation of presentations and media players without physical contact, making it especially suited for classrooms, seminars, and professional environments.
+
 
 PURPOSE :
 
 The purpose of this project is to develop an intelligent, gesture and vision-based interface system—Visionary Control—which enhances human-computer interaction by replacing conventional input devices with intuitive, contactless control mechanisms. The system is designed to facilitate seamless interaction with two key digital functions: Presentation control secured by face-based login and Media player Control through gesture recognition. By integrating computer vision and facial authentication, the project ensures secure access, hands-free operation, and modernized engagement, especially within academic and professional environments. The goal is to improve accessibility, reduce reliance on hardware, and promote automation in user interaction.
 
+ TOOLS USED
+
+1.	IDE:  VS Code
+2.	Dataset Handling:  OpenCV, mediapipe, Pickle
+3.	Libraries: OpenCV, MediaPipe, NumPy, Flask, face_recognition, pyautogui
+4.	GUI: HTML + Tailwind CSS + JavaScript
+5.	Backend: Python (Flask)
 
 It comprises two core modules: 
 
@@ -82,5 +88,40 @@ If Face is not Detected then Gesture Blocked
 The second component, the Media Control Module, allows users to manage video or audio playback through simple hand gestures. By detecting the number of fingers shown to the camera, users can perform functions like play, pause, forward, and rewind without touching any physical controls. This module operates independently and does not require face authentication.
 
 
-  This is Interface of Media Player Control
+This is Interface of Media Player Control
+
+
+![image](https://github.com/user-attachments/assets/1728ec53-4570-423f-8b83-a8ee7cb1e92d)
+
+Now Start the Module 
+
+1. ✋ Open/Close Palm ==> Play/Pause
+
+![image](https://github.com/user-attachments/assets/47648982-cae6-45be-9412-80e309a890bf)   
+
+![image](https://github.com/user-attachments/assets/9c0d398b-a8c8-4590-870a-0f3f53f75d67)
+
+
+2.  ☝️ Index Finger  ==> + 5s Forward
+
+![image](https://github.com/user-attachments/assets/1a731143-7970-4700-9f21-405b79ecb2b4)
+
+![image](https://github.com/user-attachments/assets/da9826d0-b882-4bb2-a1f1-83bb05619179)
+
+3.  ✌️ Index + Middle Finger ==> -5s Backward
+
+![Screenshot 2025-05-14 124420](https://github.com/user-attachments/assets/7a753a9c-ef2a-4d23-802a-14df96f26a71)
+![Screenshot 2025-05-14 124621](https://github.com/user-attachments/assets/fdb4ed21-67cf-4dc5-a3f8-671c15f35ca0)
+
+4.  🤟 Index + Middle + Ring (Finger) ==> +4 System Volume
+
+![Screenshot 2025-05-14 124448](https://github.com/user-attachments/assets/10368ed6-ab3f-4dd9-b8ed-58b5cc8e0f89)
+![Screenshot 2025-05-14 124643](https://github.com/user-attachments/assets/9c07ab72-1036-41cd-81dc-5e8b92fcfba6)
+
+
+5.  🖖 All Four Fingers Except Thumb ==> -4 System Volume
+
+![Screenshot 2025-05-14 124509](https://github.com/user-attachments/assets/83f4356d-c492-4c4d-9eb8-d8f9d008d1fc)
+![Screenshot 2025-05-14 124659](https://github.com/user-attachments/assets/5fc4f66f-4e39-45ef-a00b-8b8a436deab8)
+
 
