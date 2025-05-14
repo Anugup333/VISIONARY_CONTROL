@@ -22,6 +22,9 @@ It comprises two core modules:
 
 The Presentation Control Module enables users to control slides, navigate content, and even draw on the screen using predefined hand gestures. This module is uniquely integrated with a Face-Based Login and Registration System, which ensures that only authenticated users can access the presentation control features. Users must register their face once, after which their identity is verified before they are granted access—providing a secure and personalized experience.
 
+FLOW CHART OF PRESENTATION CONTROL
+
+![image](https://github.com/user-attachments/assets/ed5692ea-5f84-47af-a1de-5a232fbbae53)
 
 ACTUAL INTERFACE:- This is User Interface of VisionaryControl
 
@@ -87,6 +90,9 @@ If Face is not Detected then Gesture Blocked
 
 The second component, the Media Control Module, allows users to manage video or audio playback through simple hand gestures. By detecting the number of fingers shown to the camera, users can perform functions like play, pause, forward, and rewind without touching any physical controls. This module operates independently and does not require face authentication.
 
+FLOWCHART OF MEDIA PLAYER CONTROL
+
+![image](https://github.com/user-attachments/assets/5e43ef25-42e3-4fed-9ccc-51032f196306)
 
 This is Interface of Media Player Control
 
