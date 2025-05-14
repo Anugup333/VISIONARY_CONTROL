@@ -4,6 +4,7 @@ import time
 import cv2
 import os
 import numpy as np
+import numpy as np
 import mediapipe as mp
 import pyautogui
 import pickle
@@ -12,7 +13,7 @@ import base64
 import pythoncom  # Required for COM in Flask
 import win32com.client
 from PIL import Image
-import numpy as np
+
 
 pyautogui.PAUSE = 0.01
 
