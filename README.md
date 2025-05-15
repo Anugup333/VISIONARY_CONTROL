@@ -28,12 +28,10 @@ FLOW CHART OF PRESENTATION CONTROL
 
 ACTUAL INTERFACE:- This is User Interface of VisionaryControl
 
-
 ![image](https://github.com/user-attachments/assets/68912674-a79a-468f-a196-3c13ec21fc3d)
 
 
  Now Click on Presentation Control (This is Interface of Presentation Control)
-
 
 ![image](https://github.com/user-attachments/assets/223c6e91-637a-45e1-9e27-df8af04ea832)
 
