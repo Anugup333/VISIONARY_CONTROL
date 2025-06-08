@@ -36,11 +36,14 @@ def is_palm_facing_z(hand_landmarks):
 def fingers_up(lmList,tipIds):
     fingers = []
     # Thumb
+    # Thumb is handled differently because it bends sideways (along the X-axis).
     if lmList[tipIds[0]][1] > lmList[tipIds[0] - 1][1]:  # right hand logic
+        #  if tip's X > previous joint's X → thumb is open
         fingers.append(1)
     else:
         fingers.append(0)
     # Fingers (index to pinky)
+    # For index to pinky, we compare Y-coordinates (vertical):
     for id in range(1,5):
         if lmList[tipIds[id]][2] < lmList[tipIds[id] - 2][2]:
             fingers.append(1)
@@ -58,6 +61,17 @@ def clear_folder(folder_path):
                 os.unlink(file_path)
         except Exception as e:
             print(f"Error deleting {file_path}: {e}")
+    
+    folder_path2 = os.path.join(os.getcwd(),"uploads")        
+    
+    for filename in os.listdir(folder_path2):
+        file_path = os.path.join(folder_path2, filename)
+        try:
+            if os.path.isfile(file_path):
+                os.unlink(file_path)
+        except Exception as e:
+            print(f"Error deleting {file_path}: {e}")
+    
 
 # Simulated function for Audio/Video module
 def run_module(module_name):
@@ -83,7 +97,8 @@ def run_module(module_name):
 
             while module_status[module_name]:
                 success, img = cap.read()
-                imgRGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+                # OpenCV (cv2) loads images in BGR format by default.
+                imgRGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)   # BGR (Blue-Green-Red) to RGB (Red-Green-Blue).
                 results = hands.process(imgRGB)
                 
                 lmList = []
@@ -92,8 +107,12 @@ def run_module(module_name):
                         mpDraw.draw_landmarks(img, handLms, mpHands.HAND_CONNECTIONS)
                         
                         lmList = []
+                        # handLms.landmark contains 21 landmarks of the detected hand.
+                        # lm is a landmark with normalized coordinates (lm.x, lm.y, lm.z) in the range [0, 1].
                         for id, lm in enumerate(handLms.landmark):
+                            # Gets the image's height (h), width (w), and number of color channels (c) to convert normalized coordinates to pixel coordinates.
                             h, w, c = img.shape
+                            # Converts the normalized coordinates (from MediaPipe) into actual pixel coordinates on the image.
                             cx, cy = int(lm.x * w), int(lm.y * h)
                             lmList.append((id, cx, cy))
                         
@@ -127,6 +146,7 @@ def run_module(module_name):
                             
                 cv2.imshow("Video Control", img)
 
+                # This block of code is used to safely exit a video loop (like from a webcam) when the ESC key (Esc = key code 27) is pressed.
                 if cv2.waitKey(1) == 27:
                     cv2.destroyAllWindows()
                     cap.release()
@@ -392,6 +412,8 @@ def slide_count():
 
 if __name__ == '__main__':
     app.run(debug=True)
+    
+#  Run from the command line 
 
 # def runproject():
 #     app.run(debug=True)
