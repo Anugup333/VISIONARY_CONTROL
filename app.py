@@ -15,6 +15,7 @@ import win32com.client
 from PIL import Image
 
 
+
 pyautogui.PAUSE = 0.01
 
 app = Flask(__name__)
